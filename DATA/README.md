@@ -1,0 +1,9 @@
+# DATA
+This is the subfolder *DATA* in the git repository for the article "Heuristic Approaches to the Wafer Covering Problem." It contains :
+
+    + two subfolders, *Data_Greedy* and *Data_Genetic*, that contain the log files for the runs of different problem suite instances. The subfolders are organized hierarchical, with subfolders separating by covering scenario, then problem size and finally probe card shape. 
+    + two excel files, *Genetic Values* and *Greedy Values*, that bring together the results from the subfolders. They include the best objective values, the lower bounds as found in "Introducing Covering Problems for the Electronic Wafer Test" and two metrics, the *loss* and the *optimality gap*. The loss is a metric of solution quality in terms of overlap density and more useful for exact solutions. The optimality gap is introduced and used in the article.
+
+The greedy log files are json files that contain the best results of 5 runs of 2000 algorithm starts each. The best objective value is noted as *score* (with *rating* noting the number of occurrences of the different touchdown counts) and the solution as a touchdown map in *tdMap*. Time notes the total time in seconds that eleapsed to finish all 5 runs (on 60 parallel machines). 
+
+The genetic log files note are txt files noting the results of all 5 runs. *All objective values* denotes the final solution value achieved in the runs. These results are aggregated as the median and minimum value. The best solution is presented by its touchdowns and the corresponding touchdown count map.To judge the convergence, the file includes the number of generations per run and the list of best objective values in each generation for each run (*Best Solution values*).
