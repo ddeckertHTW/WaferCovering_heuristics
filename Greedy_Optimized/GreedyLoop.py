@@ -11,6 +11,8 @@ from Greedy_Optimized.Solution.update_values_after_touchdown import update_value
 from Greedy_Optimized.Touchdown.place_touchdown import place_touchdown
 from Greedy_Optimized.Touchdown.select_next_touchdown import select_next_touchdown
 
+# Code Author: Peter Holland-Moritz
+# Part of the article "Heuristic Approaches to the Wafer Covering Problem.", 2025
 ## This function is the main internal loop for one greedy run
 #  best touchdowns are chosen and placed, then solution object is updated
 def Greedy_Loop(waferMapObj: WaferMapClass, solutionObj: SolutionMapClass, init_time_total: datetime.timedelta, debugPrint = False, max_loop_count = 15900):

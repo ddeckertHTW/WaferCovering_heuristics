@@ -12,5 +12,5 @@ BASE_DATA_FILEPATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "D
 BASE_GREEDY_FILEPATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "DATA", "Data_Greedy").replace("\\", "/")
 
 
-#Zielfunktion Parameter
+#Objective Function Parameter
 PENALTY_SCORE = 2

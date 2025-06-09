@@ -1,5 +1,5 @@
 import os
-# Libary/List of all relevant filapths to  InputMaps / USecases. Import this instead of hardcoded Paths
+# Libary/List of all relevant filapths to  InputMaps / USecases. Import this instead of hardcoded Paths in each File seperately
 
 #Only works, because this file is in root / no subfolder
 root_dir_path = os.path.dirname(os.path.abspath(__file__))
@@ -30,9 +30,6 @@ filepath_151x151_Mod4_Error = root_dir_path + "/Data_Template/151x151_WaferMap/1
 filepath_201x201_Mod4_Error = root_dir_path + "/Data_Template/201x201_WaferMap/201x201_Mod4_Error_InputMap.txt"
 filepath_251x251_Mod4_Error = root_dir_path + "/Data_Template/251x251_WaferMap/251x251_Mod4_Error_InputMap.txt"
 
-#Custom Filepath
-filepath_bosch_TA660 = root_dir_path + "/Data_Template/TA660/InputMap_TA660.txt"
-
 # ForTesting
 filepath_100Percent_Dict = {
     '15x15': filepath_15x15_100Percent,
@@ -40,7 +37,7 @@ filepath_100Percent_Dict = {
     '51x51': filepath_51x51_100Percent,
     '101x101': filepath_101x101_100Percent,
     '151x151': filepath_151x151_100Percent,
-    '201x201': filepath_201x201_100Percent,
+    #'201x201': filepath_201x201_100Percent,
     #'251x261': filepath_251x251_100Percent,
 }
 
@@ -50,7 +47,7 @@ filepath_Diagonal_Error_Dict = {
     '51x51': filepath_51x51_Diagonal_Error,
     '101x101': filepath_101x101_Diagonal_Error,
     '151x151': filepath_151x151_Diagonal_Error,
-    '201x201': filepath_201x201_Diagonal_Error,
+    #'201x201': filepath_201x201_Diagonal_Error,
     #'251x261': filepath_251x251_Diagonal_Error,
 }
 
@@ -60,7 +57,7 @@ filepath_Mod4_Error_Dict = {
     '51x51': filepath_51x51_Mod4_Error,
     '101x101': filepath_101x101_Mod4_Error,
     '151x151': filepath_151x151_Mod4_Error,
-    '201x201': filepath_201x201_Mod4_Error,
+    #'201x201': filepath_201x201_Mod4_Error,
     #'251x261': filepath_251x251_Mod4_Error,
 }
 

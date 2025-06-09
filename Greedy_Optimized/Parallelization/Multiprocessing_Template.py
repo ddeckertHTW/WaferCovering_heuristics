@@ -1,4 +1,4 @@
-#https://gist.github.com/tappoz/cb88f7a9d9ba27cfee1e2f03537fac16
+#Took inspiration from this GitHub Code: https://gist.github.com/tappoz/cb88f7a9d9ba27cfee1e2f03537fac16
 import random
 import time
 import multiprocessing

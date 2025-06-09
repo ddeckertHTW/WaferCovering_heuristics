@@ -1,3 +1,6 @@
+# Generate a Statistics file by Generating a Result for a Input map N (500) Times and repeating that M (5) Times.
+# The Staistics File will contain all relevant Information like Min, Max, Mean, Median, Range, Variance, std_dev and all Values
+
 import datetime
 import os
 import sys
@@ -21,7 +24,8 @@ from GreedyMain import Greedy_Main
 from inputMapsLibary import *
 from probecardLibary import probecardDict_ForTesting
 
-
+# Code Author: Peter Holland-Moritz
+# Part of the article "Heuristic Approaches to the Wafer Covering Problem.", 2025
 # compress the statistics from ALL relevant Runs down into a single file
 if __name__ == "__main__":
     #removeOldMapsFromALLDir(filterFilepath)
@@ -63,7 +67,7 @@ if __name__ == "__main__":
 
     ############  FORCED OPTIONS DONE  ##############
 
-    name_addition = "V99_Statistics"
+    name_addition = "VXX_Statistics"
     print("START Generating: ", name_addition)
     curr_message="Saving total_time_ms of Run instead of Result Score"
 
@@ -73,7 +77,8 @@ if __name__ == "__main__":
     print(f"[WEIGHT COMBINATION]: {name_addition} | Weights:{weightSettingsObj}")
     for folder_name, folder_filepaths in Folder_MapTypes.items():
         for waferMap_Size, inputMapFilepath in folder_filepaths.items():
-            save_folder = folder_name
+            #save_folder = folder_name #Use for Manual overwrite
+            save_folder = None
 
             for probecardName in probecardDict_ForTesting:
                 #We allready well know which maps with Probeards are not solvavle -> SKip

@@ -10,6 +10,8 @@ from Greedy_Optimized.Solution.update_decision_variables import update_decision_
 
 #LOADING EXISTING TOUCHDOWNS !!!???? HOW
 
+# Code Author: Peter Holland-Moritz
+# Part of the article "Heuristic Approaches to the Wafer Covering Problem.", 2025
 ## Initializes WaferMap object & SolutionClass object
 def init_greedy_data(inputMapFilepath, probecardSize, td_scenario_list = None, weightSettingsObj:WeightSettingsClass = None) -> Tuple[WaferMapClass, SolutionMapClass]:
     #Load InputMap

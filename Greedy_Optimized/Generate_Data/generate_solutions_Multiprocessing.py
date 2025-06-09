@@ -1,3 +1,7 @@
+# Generate Multiple Solutions at once -> Takes all Input Files from:
+#   filepath_100Percent_Dict, filepath_Diagonal_Error_Dict, filepath_Mod4_Error_Dict
+# And runs them after each other to Generate Results and save them. Change the VersionID Flag to have some form of Version Control
+
 import datetime
 import os
 import sys
@@ -22,6 +26,10 @@ scriptFolder = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #IMPORTANT FOR DELETING ONLY OLD FILES. AND NOT NEW ONES. If Version in json Solution is lower -> delete file to regenerate
 new_versionID = 11
 
+solution_attempts = 500
+
+# Code Author: Peter Holland-Moritz
+# Part of the article "Heuristic Approaches to the Wafer Covering Problem.", 2025
 # Re-Generates all COmbinations of Probecard x InputMap and saves them in the DataFolderPath
 if __name__ == "__main__":
     #removeOldMapsFromALLDir(filterFilepath)
@@ -39,7 +47,8 @@ if __name__ == "__main__":
     print(f"[WEIGHT COMBINATION]: Weights:{weightSettingsObj}")
 
     for folder_name, folder_filepath_dict in Folder_MapTypes.items():
-        save_folder = folder_name
+        #save_folder = folder_name #Use for Manual overwrite
+        save_folder = None
 
         for inputMapFilepath in folder_filepath_dict.values():
             for probecard in probecardDict_ForTesting:
@@ -55,7 +64,7 @@ if __name__ == "__main__":
 
                 #1800 sec is 30 min
                 Greedy_Main(inputMapFilepath, probecard, saveResults=True, debugPrint=False, save_folder=save_folder,
-                            parallelization=True, global_timeout_in_seconds = 7200, solution_attempts = 10000, versionID=new_versionID, weightSettingsObj=weightSettingsObj) #, max_simultaneous_processes = 2
+                            parallelization=True, global_timeout_in_seconds = 7200, solution_attempts = solution_attempts, versionID=new_versionID, weightSettingsObj=weightSettingsObj) #, max_simultaneous_processes = 2
 
 
         printTimestampDiff(startTime, f" - Total Time FOR FOLDER: {folder_name}")

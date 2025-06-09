@@ -2,10 +2,7 @@ import numpy as np
 import math
 import os
 
-from HelperFunc.pretty_Print_Array import prettyPrintArray
-
 #import sys
-#sys.path.append('C:/Users/Peter/Desktop/Diplomarbeit_Workspace_Programming/PythonProgramming/HelperFunc/')  # Adjust the path accordingly
 #myPath = (os.getcwd()+'\\HelperFunc').replace(os.sep, '/')
 #sys.path.append(myPath)  # Adjust the path accordingly
 
@@ -38,7 +35,6 @@ def createSphericalArray(x_Max, x_Center, y_Max, y_Center, radius_Value_1, radiu
                 array[x, y] = 2
             #array[x, y] = distance
 
-    prettyPrintArray(array)
     return array
 
 def createSphericalArray_Mod4_GridError(x_Max, x_Center, y_Max, y_Center, radius_Value_1, radius_Value_2):
@@ -61,7 +57,6 @@ def createSphericalArray_Mod4_GridError(x_Max, x_Center, y_Max, y_Center, radius
                 array[x, y] = 0
 
 
-    prettyPrintArray(array)
     return array
 
 def createSphericalArray_Diagonal_GridError(x_Max, x_Center, y_Max, y_Center, radius_Value_1, radius_Value_2):
@@ -85,7 +80,6 @@ def createSphericalArray_Diagonal_GridError(x_Max, x_Center, y_Max, y_Center, ra
             if distance < radius_Value_2 and (x+1 == y or x-1 == y):
                 array[x, y] = 2
 
-    prettyPrintArray(array)
     return array
 
 def createNewFolder(folder_path):

@@ -102,7 +102,6 @@ def create_probecard_mask_adjacent(pcList, mask1: ProbecardMaskClass, mask_4_Set
         return False
     
     #First get the coordinates that are direktly next to any Probecard Site
-    from Greedy_FirstTry.PlacementOptions import getAdjacentCoordinates
     adjacentCoords = getAdjacentCoordinates(mask1.set_list) 
 
     #The coordinates of Site1 Elements. As Set to be distinct
@@ -119,3 +118,18 @@ def create_probecard_mask_adjacent(pcList, mask1: ProbecardMaskClass, mask_4_Set
     maskArray, xOffset, yOffset = convertListToNpArray_WithOffset(mask_coords)
    
     return ProbecardMaskClass(maskArray, list(mask_coords), xOffset , yOffset)
+
+
+#coordList = getMapCoordsByMask(self.leastFlexibleBin, waferMapObj.probecard.mask_1, x, y)
+#Get all Coordinates that are directly next to a Touchdown. Needs probecard.mask_1 Values as Input
+def getAdjacentCoordinates(coordList):
+    unique_values = set()
+    original_set = set(coordList)
+
+    # Loop through each coordinate
+    for x, y in coordList:
+        for offset in ([(-1, 0), (1, 0), (0, -1), (0, 1)]):
+            unique_values.add((x + offset[0], y + offset[1]))
+
+    # Convert the set to a list (if needed)
+    return list(unique_values - original_set)

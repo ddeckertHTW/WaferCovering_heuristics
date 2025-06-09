@@ -1,5 +1,5 @@
 from typing import List
-from Greedy_FirstTry.WaferMapClass import DieClass
+from Greedy_Optimized.Solution.DieClass import DieClass
 from Greedy_Optimized.NPMaskOperations.get_coordinates_by_mask import get_coordinates_by_mask
 from Greedy_Optimized.NPMaskOperations.get_values_by_coord_list import get_values_by_coord_list
 from Greedy_Optimized.Solution.SolutionMapClass import SolutionMapClass
